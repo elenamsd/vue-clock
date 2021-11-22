@@ -29,6 +29,7 @@
   "keywords": [],
   "license": "ISC",
   "dependencies": {
+    "dayjs": "^1.10.7",
     "vue": "^3.2.22"
   }
 }
