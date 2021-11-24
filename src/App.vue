@@ -1,6 +1,9 @@
 <template>
   <h1>Hola</h1>
   <Clock></Clock>
+  <Clock theme="red"></Clock>
+  <Clock theme="blue"></Clock>
+  <Clock theme="rainbow"></Clock>
 </template>
 
 
@@ -10,9 +13,6 @@ export default {
   name: "App",
   components: {
     Clock
-  },
-  data() {
-
   }
 }
 </script>
