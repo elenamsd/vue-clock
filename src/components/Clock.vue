@@ -5,15 +5,15 @@
 <script>
 import dayjs from "dayjs";
 
+const THEMES_VALUES = ["black", "red", "blue", "rainbow"];
+
 export default {
   name: "Clock",
   props: {
     theme: {
       type: String,
       default: "black",
-      validator: v => {
-        return v == "black" || v == "red" || v == "blue" || v == "rainbow" ? true : false;
-      }
+      validator: v => THEMES_VALUES.includes(v)
     }
   },
   data() {
@@ -40,19 +40,19 @@ export default {
 </script>
 
 <style>
-.black {
-  color: green;
-}
-
 .red {
-  color: red;
+  --font-color: red;
 }
 
 .blue {
-  color: blue;
+  --font-color: blue;
 }
 
 .rainbow {
-  color: rebeccapurple;
+  --font-color: rebeccapurple;
+}
+
+h1 {
+  color: var(--font-color);
 }
 </style>
